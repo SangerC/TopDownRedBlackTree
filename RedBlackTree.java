@@ -369,7 +369,7 @@ public class RedBlackTree<T extends Comparable<? super T>> implements Iterable<R
 			if(b.rightChild!=null)b.rightChild.color=Color.BLACK;
 			if(b.leftChild!=null)b.leftChild.color=Color.BLACK;
 			P.color = Color.RED;
-			return this.removeStep2(n, P, GP);
+			return this.removeStep2(n, P, b);
 		}
 		private boolean removeStep3(T n, BinaryNode P, BinaryNode GP){
 			if(this.rightChild!=null&&this.leftChild!=null){
